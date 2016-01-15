@@ -1,0 +1,129 @@
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/map_view_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/triple_and_half_margin">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        app:umanoOverlay="true"
+        app:umanoPanelHeight="192dp"
+        app:umanoShadowHeight="0dp">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingBottom="192dp"
+            app:mapType="normal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_margin="@dimen/half_margin"
+            android:background="@color/off_white"
+            android:contextClickable="true">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/triple_and_half_margin"
+                android:layout_alignParentTop="true"
+                android:background="@color/primary"
+                android:gravity="center"
+                android:text="@string/location_details"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/office_photo"
+                android:layout_width="@dimen/octuple_margin"
+                android:layout_height="@dimen/octuple_margin"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/header"
+                android:layout_marginLeft="@dimen/single_margin"
+                android:layout_marginTop="@dimen/single_margin" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/octuple_margin"
+                android:layout_below="@+id/header"
+                android:layout_marginTop="@dimen/single_margin"
+                android:layout_toRightOf="@+id/office_photo">
+
+                <TextView
+                    android:id="@+id/office_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/single_margin"
+                    android:text="@string/hello_world"
+                    android:textColor="@color/hello_grey"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/office_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/single_margin"
+                    android:drawablePadding="@dimen/quarter_margin"
+                    android:textColor="@color/hello_grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/single_margin"
+                    android:textColor="@color/hello_grey"
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/office_photo"
+                android:layout_marginTop="@dimen/single_margin"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/call"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/single_margin"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary"
+                    android:contextClickable="true"
+                    android:padding="@dimen/half_margin"
+                    android:text="@string/call"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/directions"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/single_margin"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary"
+                    android:contextClickable="true"
+                    android:drawablePadding="@dimen/single_margin"
+                    android:padding="@dimen/half_margin"
+                    android:text="@string/directions"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+</android.support.design.widget.CoordinatorLayout>
+

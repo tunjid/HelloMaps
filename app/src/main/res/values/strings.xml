@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">HelloMaps</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="error_plain">Error</string>
+    <string name="go_back">Go Back</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="network_error">Network Error</string>
+    <string name="action_settings">Home</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="error">Sorry, there was an error.</string>
+    <string name="map">Map</string>
+    <!-- LocationActivity -->
+    <string name="confirm_close">Close app?</string>
+    <string name="request_location">This app requires location services for some features. Turn location services on?</string>
+    <string name="getting_location">Getting location…</string>
+    <string name="location_failed">Location update failed</string>
+    <string name="location_updated">Location updated</string>
+    <!-- LocationActivity -->
+    <!-- LocationFragment -->
+    <string name="all_locations">All Locations</string>
+    <string name="unable_to_retrieve">Unable to retrieve items, please check your internet connection.</string>
+    <!-- LocationFragment -->
+    <!-- LocationDetailFragment -->
+    <string name="please_connect">Please connect to the internet to get directions.</string>
+    <string name="location_details">Location Details</string>
+    <string name="directions">Directions</string>
+    <string name="call">Call</string>
+    <!-- LocationDetailFragment -->
+</resources>

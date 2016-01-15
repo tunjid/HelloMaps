@@ -1,0 +1,70 @@
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinator_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context="com.myfab5.mobile.myfab5.fragments.BusinessHomeFragment"
+    tools:ignore="RtlHardcoded">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.tunjid.projects.hellomaps.customcomponents.ControllableAppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="248dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginBottom="@dimen/quadruple_margin"
+            app:expandedTitleMarginStart="@dimen/single_margin"
+            app:layout_collapseParallaxMultiplier="0.7"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:id="@+id/map_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:layout_marginTop="@dimen/triple_and_half_margin"
+                android:background="@color/transparent">
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/map_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:background="@color/off_white"
+                    app:mapType="normal" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/action_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="4dp"
+                app:contentInsetLeft="@dimen/triple_margin"
+                app:contentInsetStart="@dimen/triple_margin"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/Theme.AppCompat.NoActionBar"
+                app:theme="@style/Theme.AppCompat.NoActionBar" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </com.tunjid.projects.hellomaps.customcomponents.ControllableAppBarLayout>
+</android.support.design.widget.CoordinatorLayout>
+
+
